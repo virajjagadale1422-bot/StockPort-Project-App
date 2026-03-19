@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Stock</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}" class="button">Home</a>
+            <a href="{{ url_for('portfolio') }}" class="button">View Portfolio</a>
+            <button id="dark-mode-toggle" class="button">Toggle Dark Mode</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h1>Add New Stock</h1>
+            <form method="post" action="{{ url_for('add_stock') }}">
+                <input type="text" name="stock_name" placeholder="Stock Name" required><br><br>
+                <input type="number" name="stock_price" placeholder="Stock Price" step="0.01" required><br><br>
+                <button type="submit" class="button">Add Stock</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

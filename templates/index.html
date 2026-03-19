@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Portfolio Management - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}" class="button">Home</a>
+            <a href="{{ url_for('add_stock') }}" class="button">Add Stock</a>
+            <a href="{{ url_for('portfolio') }}" class="button">View Portfolio</a>
+            <a href="{{ url_for('logout') }}" class="button">Logout</a>
+            <button id="dark-mode-toggle" class="button">Toggle Dark Mode</button>
+            
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="welcome-section">
+            <h1>Welcome to Stock Portfolio Management</h1>
+            <p>Manage your stock portfolio with ease. Add new stocks to your portfolio and keep track of your investments in one place.</p>
+            <p>Effortlessly monitor stock performance and make informed financial decisions!</p>
+        </section>
+        
+    </main>
+</body>
+</html>
